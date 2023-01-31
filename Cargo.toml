@@ -1,0 +1,29 @@
+[package]
+name = "airplay"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/tsirysndr/airplay-rs"
+license = "MIT"
+readme = "README.md"
+authors = ["Tsiry Sandratraina <tsiry.sndr@aol.com>"]
+categories = ["api-bindings", "hardware-support", "multimedia"]
+keywords = ["airplay", "streaming", "cast", "apple"]
+description = "Rust bindings for AirPlay client"
+
+[[example]]
+name = "discover"
+path = "examples/discover.rs"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.68"
+async-stream = "0.3.3"
+futures-util = "0.3.26"
+libmdns = "0.7.3"
+mdns-sd = "0.5.10"
+plist = "1.3.1"
+serde = "1.0.152"
+surf = { version = "2.3.2", features = ["h1-client-rustls"], default-features = false}
+tokio = { version = "1.24.2", features = ["tokio-macros", "macros", "rt", "rt-multi-thread"] }
